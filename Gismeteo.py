@@ -26,7 +26,7 @@ def parse(html):
     weatherLog = {"City": h2.text, "Temperature": dd.text[:3], "humidity": div.text[:3], "date": time }
     json_weatherLog = json.dumps(weatherLog)
     print(weatherLog)
-    with open('Weatherlog.json', 'w', encoding='utf-8' ) as jsonfile:
+    with open('Weatherlog.json', 'a', encoding='utf-8' ) as jsonfile:
         json.dump(weatherLog, jsonfile, ensure_ascii = False)
 
 def main():
