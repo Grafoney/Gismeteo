@@ -27,7 +27,7 @@ def parse(html):
     json_weatherLog = json.dumps(weatherLog)
     print(weatherLog)
     with open('Weatherlog.json', 'a', encoding='utf-8' ) as jsonfile:
-        json.dump(weatherLog, jsonfile, ensure_ascii = False)
+        json.dump(weatherLog, jsonfile, ensure_ascii = False, sort_keys = True)
 
 def main():
     parse(get_html(url))
